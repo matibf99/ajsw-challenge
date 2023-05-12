@@ -48,7 +48,7 @@ public class UserDataServiceImp implements UserDataService {
         repository.save(userData);
 
         Objects.requireNonNull(cacheManager.getCache(CACHE_NAME_USERS))
-            .putIfAbsent(userData.getShortUrl(), userData);
+            .put(userData.getShortUrl(), userData);
 
         logger.info(
             String.format("Cache: added key '%d' from user '%s' to cache", userData.getShortUrl(),
