@@ -30,7 +30,7 @@ public class UserData {
     @Column(name = "uuid")
     private UUID uuid;
 
-    @Column(name = "user", unique = true, nullable = false)
+    @Column(name = "user", nullable = false)
     private String user;
 
     @NaturalId
