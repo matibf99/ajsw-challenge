@@ -136,8 +136,8 @@ un `CacheManager` para almacenar en caché los datos generados para las URL acor
 #### `generateShortUrl`
 
 Generar una URL acortada para un usuario dado. Crea un nuevo registro para el usuario con una URL
-acortada generada aleatoriamente. Luego, si el registro es nuevo, almacena los
-datos de usuario en la caché y devuelve un objeto `ShortUrlDto`, que contiene la URL acortada
+acortada generada aleatoriamente. Luego, si el registro es nuevo, almacena los datos de usuario en
+la caché y devuelve un objeto `ShortUrlDto`, que contiene la URL acortada
 generada.
 
 #### `getUserData`
