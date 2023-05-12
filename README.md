@@ -61,7 +61,7 @@ La aplicación se ejecuta en el puerto **8080**.
 La aplicación cuenta con dos endpoints:
 
 - `GET /access/{email}`: Este endpoint devuelve la URL acortada. Si crea por primera vez el recurso,
-  lo almacena en caché por un periodo tiempo configurado.
+  lo almacena en caché por un periodo de tiempo configurado.
 
 Ejemplo de solicitud:
 
@@ -110,7 +110,7 @@ La clase `UserDataController` tiene dos métodos GET:
 Maneja las solicitudes HTTP que llegan por la URL `/access/{email}`. Espera una dirección de correo
 electrónico válida en la URL. Llama al método `generateShortUrl` del servicio `UserDataService` con
 el correo electrónico proporcionado y devuelve una respuesta HTTP con el objeto `ShortUrlDto`
-generado por el método de servicio.
+generado por el método del service.
 
 Si no se puede generar la URL, se devuelve una respuesta HTTP de error interno del servidor.
 
@@ -119,14 +119,14 @@ Si no se puede generar la URL, se devuelve una respuesta HTTP de error interno d
 Maneja las solicitudes HTTP que llegan por la URL `/{shortUrl}`. Espera que se proporcione un número
 que identifique la URL acortada. Llama al método `getUserData` del servicio `UserDataService` con la
 URL corta proporcionada y devuelve una respuesta HTTP con el objeto `UserDataDto` generado por el
-método de servicio.
+método del service.
 
 Si no se puede encontrar la URL corta proporcionada, se devuelve una respuesta HTTP de error "404
 Not Found".
 
 ### Service
 
-El servicio `UserDataServiceImp` es una clase de servicio que implementa la
+El servicio `UserDataServiceImp` es una clase de la capa de servicio que implementa la
 interfaz `UserDataService`. Este servicio es responsable de generar una URL acortada para un usuario
 y obtener los datos de usuario asociados con una URL acortada dada.
 
